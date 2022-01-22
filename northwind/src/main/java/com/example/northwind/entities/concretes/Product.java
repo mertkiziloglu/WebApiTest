@@ -1,6 +1,6 @@
 package com.example.northwind.entities.concretes;
 
-import lombok.Data;
+
 
 import javax.persistence.*;
 
@@ -14,19 +14,19 @@ public class Product {
     @Column(name = "product_id")
     private int id;
 
-    @Column(name = "category_Id")
+    @Column(name = "category_id")
     private int categoryId;
 
     @Column(name = "product_name")
     private String productName;
 
-    @Column(name = "unit_Price")
+    @Column(name = "unit_price")
     private double unitPrice;
 
-    @Column(name = "units_In_Stock")
+    @Column(name = "units_in_stock")
     private short unitsInStock;
 
-    @Column(name = "quantity_Per_Unit")
+    @Column(name = "quantity_per_unit")
     private String quantityPerUnit;
 
     public Product(int id, int categoryId, String productName, double unitPrice, short unitsInStock, String quantityPerUnit) {

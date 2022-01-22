@@ -7,15 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class ProductManager implements ProductService {
 
-   //satır 14den 23 ya kadar olan yerin adı injection
+   //ı injection
     private ProductDao productDao;
 
 
     //bu annotions projede buna karşılık gelebilcek product daonun instance olabilcek bir sınıfı niteler
-
     @Autowired
     public ProductManager(ProductDao productDao) {
         super();

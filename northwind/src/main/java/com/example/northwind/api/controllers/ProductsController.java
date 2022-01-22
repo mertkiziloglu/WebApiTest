@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/prodcuts")
+@RequestMapping("/api/products")
 public class ProductsController {
 
 
@@ -18,6 +18,7 @@ public class ProductsController {
 
     @Autowired
     public ProductsController(ProductService productService) {
+        super();
         this.productService = productService;
     }
 

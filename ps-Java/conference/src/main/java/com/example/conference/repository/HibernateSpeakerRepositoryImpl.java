@@ -13,7 +13,7 @@ public class HibernateSpeakerRepositoryImpl implements SpeakerRepository {
 
         Speaker speaker = new Speaker();
         speaker.setFirstName("Mert");
-        speaker.setLastName("KIZILOGLU");
+        speaker.setLastName("mert");
         speaker.setConferenceSubject("Java");
 
         speakers.add(speaker);

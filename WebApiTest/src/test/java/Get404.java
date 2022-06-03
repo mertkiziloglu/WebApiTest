@@ -1,22 +1,20 @@
 import org.apache.http.HttpResponse;
-import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 import java.io.IOException;
 
-public class Get200 extends BaseUrl {
 
+public class Get404 extends BaseUrl {
 
     CloseableHttpClient client = HttpClientBuilder.create().build();
-    DefaultHttpClient oldClient = new DefaultHttpClient();
 
     @Test
-    public void baseUrlReturns200() throws IOException {
+    public void baseUrlReturns404() throws IOException {
 
         HttpGet httpGet = new HttpGet(BASE_ENDPOINT);
 
@@ -25,7 +23,6 @@ public class Get200 extends BaseUrl {
         int actualStatus = response.getStatusLine().getStatusCode();
 
 
-        Assert.assertEquals(actualStatus, 200);
+        Assert.assertEquals(actualStatus, 404);
     }
-
 }

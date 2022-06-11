@@ -46,6 +46,7 @@ public class ResponseHeaders extends BaseUrl {
         HttpGet httpGet = new HttpGet(BASE_ENDPOINT);
         response = client.execute(httpGet);
         String limitVal = ResponseHeaders.getHeaderJava8Way(response, "X-RateLimit-Limit");
+        Assert.assertEquals(limitVal, "70");
         Assert.assertEquals(limitVal, "60");
     }
 
